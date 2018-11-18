@@ -14,9 +14,9 @@ source:
   sha256: faa1bafee5d4fbc24d03ed237f29f1179964ebac6e3a46ac25b0eceda020b684
 
 build:
+  noarch: generic
   merge_build_host: True  # [win]
-  number: 1
-  skip: true  # [win32]
+  number: 1001
   rpaths:
     - lib/R/lib/
     - lib/
@@ -39,8 +39,7 @@ about:
   license: GPL-2
   summary: Package for holding the database for the extrafont package
   license_family: GPL2
-  license_file: '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2'  # [unix]
-  license_file: '{{ environ["PREFIX"] }}\R\share\licenses\GPL-2'  # [win]
+  license_file: '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2'
 
 extra:
   recipe-maintainers:
